@@ -67,11 +67,11 @@ jobs:
         with:
           name: dist-files
           path: dist
-          with:
-            artifact-name: dist-files
   deploy:
     needs: build
     uses: ./.github/workflows/reusable.yml
+    with:
+      artifact-name: dist-files
   report:
     needs: [lint, deploy]
     if: failure()

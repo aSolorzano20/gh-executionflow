@@ -3,7 +3,7 @@ on:
   workflow_call:
     inputs:
       artifact-name:
-        description: 'Name of the artifact to deploy'
+        description: Name of the artifact to deploy
         required: true
         default: dist
         type: string
